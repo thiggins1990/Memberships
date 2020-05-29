@@ -18,9 +18,10 @@ namespace Memberships.Entities
         [MaxLength(255)] [Required] public string Title { get; set; }
         [MaxLength(2048)] public string Description { get; set; }
         [MaxLength(1024)] public string Url { get; set; }
-        [MaxLength(1024)] public string ImageUrl { get; set; }
+        [DisplayName("Image Url")] [MaxLength(1024)] public string ImageUrl { get; set; }
         [AllowHtml] public string HTML { get; set; }
-        [DefaultValue(0)] public int WaitDays { get; set; }
+
+        [DisplayName("Wait Days")] [DefaultValue(0)] public int WaitDays { get; set; }
         public string HTMLShort
         {
             get
